@@ -26,6 +26,9 @@ for uid in range(int(sys.argv[2]), int(sys.argv[3])):
     ptr = [str(uid)]
     ptr.append( content.find("h4").string.split(u"：")[1] )
     strs = [ _.getText() for _ in content.find_all("p") ]
+    if len(strs) < 6:
+        print ("ivod 網址編號 {} 格式不同.".format(uid))
+        continue
     ptr.append( strs[1] ) #屆期
     ptr += [_.split(u"：")[1] for _ in strs[2:6]]
     ptr.append( strs[6].split(u"會議簡介：")[1].replace("\t",'').strip() ) #會議簡介
