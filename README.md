@@ -12,8 +12,11 @@
   - requests
   - bs4
  
+ ```python
+ pip install requests beautifulsoup4
+ ```
+ 
 # Running
 ```bash
 python log.py <存檔位置> <起始流水號> <結束流水號>
 ```
- **parse 完的 csv 有少量 bug 待修正。
